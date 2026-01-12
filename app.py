@@ -28,16 +28,16 @@ def hello():
     except Exception as e:
         db_status = f"Erro ao conectar no banco: {str(e)}"
 
-    ##return f"""
-    ##<h1>Aplicação Python no OpenShift</h1>
-    ##<p>Status do Banco: <b>{db_status}</b></p>
-    ##<p>Versão do App: 1.0 (Azul)</p>
-    ##"""
     return f"""
-    <h1 style="color: green;">Aplicação Python 2.0</h1>
+    <h1>Aplicação Python no OpenShift</h1>
     <p>Status do Banco: <b>{db_status}</b></p>
-    <p>Novidade: <b>Agora com CI/CD Automatizado! 🚀</b></p>
+    <p>Versão do App: 1.0 (Azul)</p>
     """
+    ##return f"""
+    ##<h1 style="color: green;">Aplicação Python 2.0</h1>
+    ##<p>Status do Banco: <b>{db_status}</b></p>
+    ##<p>Novidade: <b>Agora com CI/CD Automatizado! 🚀</b></p>
+    ##"""
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
